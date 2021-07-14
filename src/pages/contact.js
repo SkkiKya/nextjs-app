@@ -1,8 +1,12 @@
 
+import Layout from "../components/layout"
+
 const Contact = () =>
 {
   return (
-    <h1>コンタクトページ</h1>
+    <Layout>
+      <h1>コンタクトページ</h1>
+    </Layout>
   )
 }
 

@@ -1,12 +1,14 @@
 
 import matter from "gray-matter"
 import Link from "next/link"
+import Layout from "../components/layout"
+
 
 const Blog = (props) =>
 {
   console.log(props.blogs);
   return (
-    <>
+    <Layout>
     <h1>ブログページ</h1>
       {props.blogs.map((blog, index) =>
         <div key= { index }>
@@ -15,7 +17,7 @@ const Blog = (props) =>
           <Link href={`/blog/${blog.slug}`}>Read More</Link>
         </div>
     )}
-    </>
+    </Layout>
   );
 };
 

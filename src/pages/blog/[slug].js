@@ -1,16 +1,18 @@
 
 import matter from "gray-matter"
 import ReactMarkdown from 'react-markdown'
+import Layout from "../../components/layout"
+
 
 const singleBog = (props) =>
 {
   console.log(props);
   return (
-    <>
+    <Layout>
       <h3>{props.frontmatter.title}</h3>
       <p>{props.frontmatter.date}</p>
       <ReactMarkdown children={props.markdownBody} />
-    </>
+    </Layout>
   )
 }
 
